@@ -13,6 +13,7 @@ H_t = zeros(1, trials);
 for i = 1:trials
 %Generate Tiling Harmonic values on rectangular grid
 %Saves both tiling harmonic and graph harmonic inner values
+    disp('trial ', int2str(i));
     B = rand(size);
     G = graphHarmInner(B, decimal_digits);
     T = findAllInnerVals(round(G, decimal_digits), delta);
@@ -28,3 +29,7 @@ for i = 1:trials
     end
 end
 
+disp('Graph Harmonic Constants:');
+disp(H_g);
+disp('Graph Tiling Harmonic Constants:');
+disp(H_t);
