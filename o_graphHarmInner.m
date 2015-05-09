@@ -9,7 +9,7 @@ function M = o_graphHarmInner(B, decimal_digits)
         end
     end
 
-    r = 10^decimal_digits
+    r = 10^decimal_digits;
 
     if ~isequal(round(B_i*r), round(B*r))
         %disp(B_i)
